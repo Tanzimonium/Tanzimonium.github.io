@@ -1,26 +1,26 @@
 
 
 body {
-    background-color: lightgrey;
+    background-color: #f8d2d3;
     font-family: Helvetica, Arial, sans-serif;
-    margin: 0%;
+    margin: 0;
     font-size: 1.5vw;
 }
 
 #logo {
-    margin: 0%;
-    padding: 8px;
+    margin: 0;
+    padding-top: 10%;
     font-family: "Fredoka One", sans-serif;
-    width: 22%;
+    width: 15%;
     border-radius: 10%;
 }
 
 ul {
-    margin: 0px;
+    margin: 0;
 }
 
-body > header{
-    background-color: orange;
+body > header {
+    background-color: #d93652;
     color: white;
     display: flex;
     height: 11vh;
@@ -28,28 +28,116 @@ body > header{
     justify-content: space-around;
 }
 
-#nav-ul{
+#nav-ul {
     display: flex;
-    justify-content: space-evenly;
-}
-
-#nav-ul > li{
-    padding: 8px;
-    margin: 16px;
-}
-
-
-body > header > nav > ul {
+    justify-content: space-between; 
     list-style: none;
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1000px;
 }
+
+
+#nav-ul > li {
+    flex-grow: 1; 
+    padding: 8px;
+    margin: 0 10px; 
+    position: relative;
+    text-align: center;
+}
+
 
 .navbutton {
-    color: white;
     text-decoration: none;
-    padding: 12px;
-    border: 1px solid wheat;
-    border-radius: 10%;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    display: block; 
+    border-right: 1px solid white; 
+}
+
+
+#nav-ul li:last-child .navbutton {
+    border-right: none;
+}
+
+
+.navbutton:hover {
+    background-color: #c87e84;
+    border-radius: 5px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+
+.dropdown-content li {
+    list-style-type: none;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    body > header {
+        flex-direction: column;
+    }
+
+    #nav-ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-ul li {
+        margin: 10px 0;
+    }
+
+    .navbutton {
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+body > main > div > aside {
+    padding-top: 20vh;
+}
+
+#bubble-tea-header {
+    font-family: 'Fredoka One', sans-serif;  
+    font-size: 3rem;  
+    color: #e63946;  
+    text-align: center; 
+    margin: 20px 0; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  
+    -webkit-text-stroke: 1px black;
 }
 
 body > main article {
@@ -58,14 +146,37 @@ body > main article {
 
 }
 
+h3 {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.8rem;
+    color: #e0b192;
+    text-align: center;
+    margin-bottom: 10px;
+    -webkit-text-stroke: 0.5px black;
+}
+
 
 #main-content{
     display: flex;
     justify-content: space-around;
 }
 
+article {
+    flex-grow: 5;  /* Allow main article to take up remaining space */
+    max-width: 1000px;
+    margin: 0 0px; /* Add space around the article */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
 #main-content div {
     width: 70%;
+}
+
+.resize-image {
+    width: 100%;
+    height: auto;
+
 }
 
 h2 {
@@ -76,14 +187,26 @@ form {
     text-align: center;
 }
 
+
+
 body > footer{
-    background-color: orange;
+    background-color: #d93652;
     display: flex;
 }
 
 
 img {
     border-radius: 10%;
+}
+
+#bubble-tea-footer {
+    font-family: 'Fredoka One', sans-serif;  
+    font-size: 3rem;  
+    color: #f8d2d3;  
+    text-align: center; 
+    margin: 20px 0; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  
+    -webkit-text-stroke: 1px black;
 }
 
 #footer-ul{
